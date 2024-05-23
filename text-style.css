@@ -1,0 +1,233 @@
+.Title-main {
+
+   margin-top: 15%;
+   font-size: 4.2rem;
+   text-transform: uppercase;
+   font-weight: 400;
+   color: #fff;
+   text-shadow:
+      0 0 7px #fff,
+      0 0 30px rgba(255, 0, 128, 0.5),
+      0 0 70px rgba(255, 0, 0, 0.5),
+      0 0 90px rgba(166, 0, 255, 0.5);
+}
+
+.Slides-title {
+
+   font-size: 2rem;
+   font-weight: bold;
+   text-transform: uppercase;
+   color: white;
+   position: absolute;
+   /* Изменено на absolute */
+   top: 30px;
+   /* Размещаем вверху */
+   left: 30px;
+   /* Размещаем слева */
+   z-index: 0;
+   padding: 10px;
+   border-radius: 10px;
+   white-space: nowrap;
+   opacity: 0.9;
+   /* Прозрачность 50% */
+
+
+}
+
+.Slides-title:before {
+   content: '';
+   /* Создаем пустой псевдоэлемент */
+   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+   /* Градиент */
+   position: absolute;
+   /* Позиционируем абсолютно */
+   top: 0;
+   /* Располагаем сверху */
+   left: 0;
+   /* Располагаем слева */
+   right: 0;
+   /* Располагаем справа */
+   bottom: 0;
+   /* Располагаем снизу */
+   background-size: 400%;
+   /* Размер фона */
+   z-index: -1;
+   /* Размещаем под текстом */
+   filter: blur(5px);
+   /* Размываем фон */
+   border-radius: inherit;
+   /* Наследуем скругление углов */
+   opacity: 1;
+   /* Сразу делаем обводку видимой */
+   animation: glowing 20s linear infinite;
+   /* Применяем анимацию */
+}
+
+.Slides-title:active {
+   color: #000
+}
+
+.Slides-title:active:after {
+   background: transparent;
+}
+
+.Slides-title:hover:before {
+   opacity: 1;
+}
+
+.Slides-title:after {
+   z-index: -1;
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: #111;
+   left: 0;
+   top: 0;
+   border-radius: 10px;
+   opacity: 1;
+}
+
+@keyframes glowing {
+   0% {
+      background-position: 0 0;
+   }
+
+   50% {
+      background-position: 400% 0;
+   }
+
+   100% {
+      background-position: 0 0;
+   }
+}
+
+.text-two-1 {
+
+   position: absolute;
+   left: 0;
+   width: 30%;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 26px;
+   line-height: 1.5;
+   color: white;
+   word-wrap: break-word;
+   background-color: rgba(255, 208, 0, 0.05);
+   border: 1px solid #71470c;
+
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(40px);
+   z-index: 3;
+
+}
+
+
+.text-three {
+
+   position: absolute;
+   left: 20px;
+   width: 30%;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 18px;
+   line-height: 1.5;
+   color: white;
+   word-wrap: break-word;
+   background-color: rgba(98, 65, 16, 0.192);
+   border: 1px solid #5d3b0f;
+
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(40px);
+   z-index: 3;
+}
+
+
+.text-four {
+
+   position: absolute;
+   left: 20px;
+   width: 35%;
+   top: 55%;
+   transform: translateY(-50%);
+   font-size: 18px;
+   
+   line-height: 1.5;
+   color: white;
+   word-wrap: break-word;
+   background-color: rgba(255, 55, 0, 0.09);
+   border: 1px solid #ff0000c4;
+
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(40px);
+   z-index: 3;
+}
+
+
+.text-five {
+
+   position: absolute;
+   left: 20px;
+   width: 50%;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 18px;
+   line-height: 1.5;
+   color: white;
+   word-wrap: break-word;
+   background-color: rgba(60, 54, 54, 0.5);
+   border: 1px solid rgba(166, 28, 27, 1);
+
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(40px);
+   z-index: 3;
+}
+.text-five-two {
+
+   position: absolute;
+   right: 20px;
+   width: 45%;
+   top: 55%;
+   transform: translateY(-50%);
+   font-size: 16px;
+   line-height: 1.5;
+   color: white;
+   word-wrap: break-word;
+   background-color: rgba(60, 54, 54, 0.5);
+   border: 1px solid rgba(166, 28, 27, 1);
+
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(40px);
+   z-index: 3;
+}
+
+.text-six {
+
+   position: absolute;
+   left: 20px;
+   width: 30%;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 26px;
+   line-height: 1.5;
+   color: white;
+   word-wrap: break-word;
+   background-color: rgba(60, 54, 54, 0.5);
+   border: 1px solid #c1810b;
+
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(40px);
+   z-index: 3;
+}

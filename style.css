@@ -1,0 +1,210 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+@font-face {
+   font-family: raleway_f;
+   src: url(/fonts/raleway-regular.woff2);
+}
+
+@font-face {
+   font-family: raleway_f;
+   src: url(/fonts/raleway-black.woff2);
+   font-weight: 900;
+}
+
+/* Дополнительные стили */
+body,
+html {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   overflow-x: hidden;
+   /* чтобы избежать горизонтальной прокрутки */
+   background-color: #000;
+}
+
+#visitCount {
+   background-color: #f0f0f0;
+   padding: 10px;
+   text-align: center;
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   z-index: 2;
+}
+
+/* Стили для слайдера */
+.swiper-container {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   /* чтобы изображения не выходили за границы слайдера */
+}
+
+.swiper-slide {
+   text-align: center;
+   font-size: 18px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-size: cover;
+   background-position: center;
+   height: 100%;
+   /* чтобы слайды занимали всю высоту контейнера */
+   text-align: center;
+   /* Добавляем выравнивание текста по центру */
+   position: relative;
+
+}
+
+.video-image {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   /* Занимать всю ширину слайда */
+   height: 100%;
+   /* Занимать всю высоту слайда */
+   z-index: 1;
+   /* Убедиться, что изображение находится поверх остального содержимого */
+}
+
+.video-image img {
+   width: 100%;
+   /* Занимать всю доступную ширину */
+   height: 100%;
+   /* Занимать всю доступную высоту */
+}
+
+
+.main-content {
+   width: 100%;
+   /* Делаем контент внутри слайда занимающим всю доступную ширину */
+}
+
+
+#more-info {
+
+   display: none;
+   position: fixed;
+   bottom: 10%;
+   left: 50%;
+   right: 10%;
+   background-color: rgba(21, 0, 255, 0.05);
+   border: 1px solid #2a7823;
+   color: #9fb890;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(40px);
+   z-index: 3;
+   overflow-y: auto;
+   /* Отключаем прокрутку по умолчанию */
+   max-height: 70vh;
+   /* Устанавливаем максимальную высоту окна */
+}
+
+/* Стилизация полосы прокрутки */
+#more-info::-webkit-scrollbar {
+   width: 12px;
+   /* Ширина полосы прокрутки */
+}
+
+#more-info::-webkit-scrollbar-track {
+   background: #0b2107d3;
+   /* Цвет фона полосы прокрутки */
+   opacity: 0.7;
+}
+
+#more-info::-webkit-scrollbar-thumb {
+   background-color: #065a12e8;
+   /* Цвет полосы прокрутки */
+   border-radius: 6px;
+   /* Закругление углов полосы прокрутки */
+   border: 1px solid #f1f1f1;
+   /* Рамка полосы прокрутки */
+}
+
+
+
+.container {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   z-index: 2;
+}
+
+.container button {
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 10px 20px;
+   border-radius: 5px;
+   margin-right: 10px;
+   transition: background-color 0.3s;
+}
+
+.container button:hover {
+   background-color: #ddd; /* Цвет фона при наведении */
+}
+
+.russian {
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   background: linear-gradient(to bottom, white, blue, red);
+   color: white;
+
+}
+
+.belorussian {
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   background: linear-gradient(to bottom, red, green);
+   color: white;
+
+}
+
+.video {
+   position: fixed;
+   top: 23%;
+   right: 20%;
+   z-index: 2;
+   width: 45%;
+   /* Ширина видео равна 100% ширины контейнера */
+   height: auto;
+   /* Высота видео автоматически рассчитывается, сохраняя пропорции */
+}
+.social{
+   position: absolute;
+   top: 15px;
+   right: 180px;
+   z-index: 2;
+   
+
+
+}
+.social img{
+   
+   width: 50px;
+   height: 50px;
+   
+
+
+}
+.social_wk img{
+   border-radius: 30px;
+   box-shadow:0 0 20px #e25b0e
+
+
+}
+.social_inst img{
+
+   box-shadow:0 0 20px #2c11b1;
+   border-radius: 12px;
+
+}
+
+

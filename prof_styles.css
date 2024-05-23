@@ -1,0 +1,341 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   height: 100%;
+   background-color: #000;
+}
+
+@font-face {
+   font-family: 'YourFontName';
+   /* Название шрифта для использования в CSS */
+   src: url('fonts/raleway-regular.woff2') format('woff2');
+   /* Поддержка разных форматов */
+   font-weight: normal;
+   /* Нормальный начертание шрифта */
+   font-style: normal;
+   /* Обычный стиль шрифта */
+}
+
+@font-face {
+   font-family: 'YourFontName-Bold';
+   /* Название шрифта для использования в CSS */
+   src: url('fonts/raleway-black.woff2') format('woff2');
+   font-weight: bold;
+   /* Полужирное начертание шрифта */
+   font-style: normal;
+   /* Обычный стиль шрифта */
+}
+
+/* Увеличиваем размер шрифта для всего текста в теле документа */
+body {
+   font-family: 'YourFontName', sans-serif;
+   /* Замените 'YourFontName' на название вашего шрифта */
+   font-size: 20px;
+   /* Увеличиваем размер шрифта */
+}
+
+/* Увеличиваем размер шрифта и добавляем эффект свечения для заголовков */
+h1,
+h2,
+h3 {
+   font-family: 'YourFontName-Bold', sans-serif;
+   /* Замените 'YourFontName-Bold' на название вашего полужирного шрифта */
+   font-size: 36px;
+   /* Увеличиваем размер шрифта */
+   text-shadow: 0 0 5px rgba(255, 255, 255, 1.5);
+   /* Добавляем эффект свечения */
+
+}
+
+
+
+.swiper-slide h2 {
+
+   font-size: 32px;
+   font-weight: bold;
+   text-transform: uppercase;
+   color: white;
+   position: absolute;
+   /* Изменено на absolute */
+   top: 30px;
+   /* Размещаем вверху */
+   left: 30px;
+   /* Размещаем слева */
+   z-index: 0;
+   padding: 10px;
+   border-radius: 10px;
+   white-space: nowrap;
+   opacity: 0.9;
+   /* Прозрачность 50% */
+
+
+}
+
+.swiper-slide h2:before {
+   content: '';
+   /* Создаем пустой псевдоэлемент */
+   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+   /* Градиент */
+   position: absolute;
+   /* Позиционируем абсолютно */
+   top: 0;
+   /* Располагаем сверху */
+   left: 0;
+   /* Располагаем слева */
+   right: 0;
+   /* Располагаем справа */
+   bottom: 0;
+   /* Располагаем снизу */
+   background-size: 400%;
+   /* Размер фона */
+   z-index: -1;
+   /* Размещаем под текстом */
+   filter: blur(5px);
+   /* Размываем фон */
+   border-radius: inherit;
+   /* Наследуем скругление углов */
+   opacity: 1;
+   /* Сразу делаем обводку видимой */
+   animation: glowing 20s linear infinite;
+   /* Применяем анимацию */
+}
+
+.swiper-slide h2:active {
+   color: #000
+}
+
+.swiper-slide h2:active:after {
+   background: transparent;
+}
+
+.swiper-slide h2:hover:before {
+   opacity: 1;
+}
+
+.swiper-slide h2:after {
+   z-index: -1;
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: #111;
+   left: 0;
+   top: 0;
+   border-radius: 10px;
+   opacity: 1;
+}
+
+@keyframes glowing {
+   0% {
+      background-position: 0 0;
+   }
+
+   50% {
+      background-position: 400% 0;
+   }
+
+   100% {
+      background-position: 0 0;
+   }
+}
+
+.swiper-container {
+   width: 100%;
+   height: 100vh;
+   /* Изменено на высоту окна просмотра (viewport height) */
+   overflow: hidden;
+   /* Добавлено для скрытия возможного переполнения */
+}
+
+.swiper-slide {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   /* Добавлено */
+   background-size: cover;
+   /* Изменено на cover для заполнения всего слайда */
+   background-position: center;
+   background-repeat: no-repeat;
+   /* Добавлено для предотвращения повторения фоновой картинки */
+   position: relative;
+   /* Устанавливаем позиционирование для родительского элемента */
+}
+
+.slide-text {
+   font-family: 'YourFontName', sans-serif;
+   font-size: 20px;
+   position: absolute;
+   left: 10px;
+   width: 30%;
+   top: 20%;
+   line-height: 1.5;
+   color: white;
+   word-wrap: break-word;
+   background-color: rgba(0, 0, 0, 0.54);
+   border: 1px solid #500834;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(40px);
+   z-index: 3;
+}
+
+
+
+
+.videos-container {
+   position: absolute;
+   top: center;
+   left: 35%;
+
+}
+
+.row {
+   width: 100%;
+   display: flex;
+   gap: 40px;
+   /* Расстояние между видео в строке */
+   margin-bottom: 40px;
+   /* Увеличение расстояния между строками */
+}
+
+.video-container {
+   width: calc(40%-20px);
+   /* Уменьшаем ширину контейнера для видео и учитываем отступ */
+
+}
+
+.video {
+   width: 80%;
+   /* Ширина видео равна 100% ширины контейнера */
+   height: auto;
+   /* Высота видео автоматически рассчитывается, сохраняя пропорции */
+   z-index: 3;
+}
+
+
+.container {
+   position: fixed;
+   z-index: 2;
+   top: 10px;
+   right: 15%;
+}
+
+.container button {
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 10px 20px;
+   border-radius: 5px;
+   transition: background-color 0.3s;
+}
+
+.container button:hover {
+   background-color: #ddd; /* Цвет фона при наведении */
+}
+
+.russian {
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   background: linear-gradient(to bottom, white, blue, red);
+   color: white;
+   height: 40px;
+}
+
+.belorussian {
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   background: linear-gradient(to bottom, red, green);
+   color: white;
+   height: 40px;
+
+}
+
+
+.return {
+   position: absolute;
+   border: none;
+   outline: none;
+   right: 5%;
+   top: 10px;
+   height: 40px;
+   width: 140px;
+   color: #fff;
+   background: #111;
+   cursor: pointer;
+   border-radius: 10px;
+   opacity: 0.9;
+   /* Прозрачность 50% */
+   z-index: 2;
+   /* Устанавливаем выше, чем текст */
+   font-size: 20px;
+}
+
+.return:before {
+   content: '';
+   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+   position: absolute;
+   bottom: -2px;
+   left: -2px;
+   background-size: 400%;
+   z-index: -1;
+   filter: blur(5px);
+   width: calc(100% + 4px);
+   height: calc(100% + 4px);
+   animation: glowing 20s linear infinite;
+   opacity: 0;
+   transition: opacity .3s ease-in-out;
+   border-radius: 10px;
+}
+
+.return:active {
+   color: #000
+}
+
+.return:after {
+   background: transparent;
+}
+
+.return:before {
+   opacity: 1;
+}
+
+.return:after {
+   z-index: -1;
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: #111;
+   left: 0;
+   top: 0;
+   border-radius: 10px;
+}
+
+
+
+@keyframes glowing {
+   0% {
+      background-position: 0 0;
+   }
+
+   50% {
+      background-position: 400% 0;
+   }
+
+   100% {
+      background-position: 0 0;
+   }
+}
+
+
+
+
+

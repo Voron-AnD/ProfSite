@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Тест Большая Пятёрка (Big Five)</title>
+   <link rel="stylesheet" href="styles.css">
+   <script src="questions.json" defer></script>
+   <script src="scripts.js" defer></script>
+</head>
+
+<body>
+   <h1>Тест Большая Пятёрка (Big Five)</h1>
+   <div class="container">
+   
+      <p>Тест Большая Пятёрка оценивает пять основных черт личности: открытость опыту, добросовестность, экстраверсия,
+         доброжелательность и нейротизм. Пожалуйста, выберите наиболее подходящий для вас ответ на каждый из вопросов.
+      </p>
+      <h2>Описание теста</h2>
+      <p>Тест Большая Пятёрка (Big Five) — это научно признанный инструмент, который используется для оценки ключевых
+         черт личности. Модель включает в себя пять факторов:</p>
+      <ul>
+         <li><strong>Открытость опыту (Openness to Experience)</strong>: склонность к креативности, любопытству и
+            разнообразию.</li>
+         <li><strong>Добросовестность (Conscientiousness)</strong>: уровень организации, ответственности и
+            целеустремленности.</li>
+         <li><strong>Экстраверсия (Extraversion)</strong>: степень общительности, энергичности и стремления к вниманию.
+         </li>
+         <li><strong>Доброжелательность (Agreeableness)</strong>: склонность к сотрудничеству, альтруизму и
+            доверчивости.</li>
+         <li><strong>Нейротизм (Neuroticism)</strong>: уровень эмоциональной нестабильности и склонности к негативным
+            эмоциям.</li>
+      </ul>
+      <p>Каждый вопрос теста относится к одной из этих черт и позволяет оценить, насколько выражена у вас каждая из них.
+         После прохождения теста вы получите результат с оценками по каждой из пяти черт.</p>
+      <form id="bigFiveForm">
+         <!-- Вопросы будут загружены здесь -->
+      </form>
+      <button type="submit" class="submit-button" id="submitButton">Отправить</button>
+      <div id="result"></div>
+      <button type="button" class="home-button" id="homeButton" style="display: none;">На главную</button>
+   </div>
+   
+</body>
+
+</html>

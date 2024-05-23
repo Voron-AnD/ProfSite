@@ -1,0 +1,287 @@
+body,
+html {
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   /* Можно удалить это свойство, если вы не хотите скрывать полосы прокрутки */
+}
+
+
+/* Стили для контейнера теста */
+.quiz-background {
+   position: relative;
+   width: 100vw;
+   height: 100vh;
+   /* Устанавливаем высоту для контейнера */
+   overflow-y: auto;
+   /* Включаем прокрутку по вертикали при необходимости */
+   background-image: url('../img/test_slide.jpg');
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+   box-sizing: border-box;
+}
+
+
+
+/* Стили для контейнера теста */
+.quiz-container {
+   position: relative;
+   margin: 0 auto;
+   max-width: 800px;
+   height: 80vh;
+   /* Устанавливаем высоту контейнера */
+   padding: 20px;
+   top: 5%;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   overflow-y: scroll;
+   /* Включаем прокрутку по вертикали всегда */
+   overflow-x: hidden;
+   /* Скрываем горизонтальную прокрутку */
+   direction: ltr;
+   /* Устанавливаем направление текста справа налево */
+   scrollbar-width: none;
+   /* Скрываем стандартную полосу прокрутки для Firefox */
+   -ms-overflow-style: none;
+   /* Скрываем стандартную полосу прокрутки для Internet Explorer и Edge */
+}
+
+/* Стили для скрытия полосы прокрутки в Chrome, Safari и Opera */
+.quiz-container::-webkit-scrollbar {
+   display: none;
+}
+
+
+/* Стили для контейнера вопроса */
+.question-container {
+   margin-bottom: 20px;
+   padding: 20px;
+   background: rgba(255, 255, 255, 0.8);
+   border-radius: 5px;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для текста вопроса */
+.question-container p {
+   font-weight: bold;
+   font-size: 18px;
+}
+
+/* Стили для списка ответов */
+.question-container ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+/* Стили для каждого варианта ответа */
+.question-container li {
+   margin-bottom: 5px;
+   font-size: 16px;
+}
+
+/* Стили для метки ответа */
+.question-container label {
+   margin-left: 5px;
+}
+
+
+#result {
+   text-align: center;
+   font-size: 24px;
+   /* Увеличим размер шрифта результата */
+   font-weight: bold;
+   /* Увеличим жирность текста результата */
+   color: yellow;
+   /* Изменим цвет текста результата */
+}
+
+
+h1 {
+
+   font-size: 28px;
+   font-weight: bold;
+   text-transform: uppercase;
+   color: white;
+   position: absolute;
+   /* Изменено на absolute */
+   top: -10px;
+   /* Размещаем вверху */
+   
+   /* Размещаем слева */
+   z-index: 0;
+   padding: 10px;
+   border-radius: 10px;
+   white-space: nowrap;
+   opacity: 0.9;
+   /* Прозрачность 50% */
+
+
+}
+
+h1:before {
+   content: '';
+   /* Создаем пустой псевдоэлемент */
+   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+   /* Градиент */
+   position: absolute;
+   /* Позиционируем абсолютно */
+   top: 0;
+   /* Располагаем сверху */
+   left: 0;
+   /* Располагаем слева */
+   right: 0;
+   /* Располагаем справа */
+   bottom: 0;
+   /* Располагаем снизу */
+   background-size: 400%;
+   /* Размер фона */
+   z-index: -1;
+   /* Размещаем под текстом */
+   filter: blur(5px);
+   /* Размываем фон */
+   border-radius: inherit;
+   /* Наследуем скругление углов */
+   opacity: 1;
+   /* Сразу делаем обводку видимой */
+   animation: glowing 20s linear infinite;
+   /* Применяем анимацию */
+}
+
+h1:active {
+   color: #000
+}
+
+h1:active:after {
+   background: transparent;
+}
+
+h1:hover:before {
+   opacity: 1;
+}
+
+h1:after {
+   z-index: -1;
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: #111;
+   left: 0;
+   top: 0;
+   border-radius: 10px;
+   opacity: 1;
+}
+
+@keyframes glowing {
+   0% {
+      background-position: 0 0;
+   }
+
+   50% {
+      background-position: 400% 0;
+   }
+
+   100% {
+      background-position: 0 0;
+   }
+}
+
+
+#go-to-main {
+   position: relative;
+   left: 43%;
+}
+
+
+
+#retry-test {
+   position: relative; 
+   
+}
+
+
+
+.quiz-container button
+{
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+   border: none;
+   position: relative;
+   bottom: 10px;
+   left: center;
+   width: 230px;
+   height: 50px;
+   outline: none;
+   color: #fff;
+   background: #111;
+   cursor: pointer;
+   border-radius: 10px;
+   opacity: 0.9;
+   /* Прозрачность 50% */
+   z-index: 1;
+   /* Устанавливаем выше, чем текст */
+   font-size: 20px;
+}
+
+.quiz-container button:before
+{
+   content: '';
+   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+   position: absolute;
+   bottom: -2px;
+   left: -2px;
+   background-size: 400%;
+   z-index: -1;
+   filter: blur(5px);
+   width: calc(100% + 4px);
+   height: calc(100% + 4px);
+   animation: glowing 20s linear infinite;
+   opacity: 0;
+   transition: opacity .3s ease-in-out;
+   border-radius: 10px;
+}
+
+.quiz-container button:active{
+   color: #000
+}
+
+.quiz-container button:after {
+   background: transparent;
+}
+
+.quiz-container button:before {
+   opacity: 1;
+}
+
+.quiz-container button:after {
+   z-index: -1;
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: #111;
+   left: 0;
+   top: 0;
+   border-radius: 10px;
+}
+
+@keyframes glowing {
+   0% {
+      background-position: 0 0;
+   }
+
+   50% {
+      background-position: 400% 0;
+   }
+
+   100% {
+      background-position: 0 0;
+   }
+}

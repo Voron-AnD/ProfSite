@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Тест Holland Codes (RIASEC)</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   <h1 class="title">Тест Holland Codes (RIASEC)</h1>
+   <div class="container">
+      
+      <p>Методика Holland Codes (RIASEC) разработана Джоном Холландом и предназначена для определения предпочтений
+         человека в профессиональной деятельности. Тест основан на шести типах личности и профессиональной среды:</p>
+         <ul>
+         <li><strong>R (Realistic) - Реалистический:</strong> Практические, физические, технические или механические
+            занятия.</li>
+         <li><strong>I (Investigative) - Интеллектуальный:</strong> Исследования, анализ, научные работы.</li>
+         <li><strong>A (Artistic) - Артистический:</strong> Творчество, искусство, самовыражение.</li>
+         <li><strong>S (Social) - Социальный:</strong> Общение, помощь другим, обучение.</li>
+         <li><strong>E (Enterprising) - Предприимчивый:</strong> Руководство, управление, бизнес.</li>
+         <li><strong>C (Conventional) - Конвенциональный:</strong> Организация, структурирование, управление
+            информацией.</li>
+      </ul>
+      <p>Выберите наиболее подходящий для вас ответ на каждый из вопросов. Ваши ответы помогут определить ваши
+         предпочтения и склонности к определенным видам профессиональной деятельности.</p>
+      <form id="riasecForm">
+         <!-- Вопросы будут загружены здесь -->
+      </form>
+      <div class="buttons">
+         <button type="submit" class="submit-button" id="submitButton">Отправить</button>
+         <button type="button" class="home-button" id="homeButton">На главную</button>
+      </div>
+      <div id="result"></div>
+   </div>
+   <script src="questions.json"></script>
+   <script src="scripts.js"></script>
+</body>
+
+</html>

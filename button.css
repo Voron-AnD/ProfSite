@@ -1,0 +1,148 @@
+.prof_button,
+.learn-more-btn
+{
+   position: absolute;
+   bottom: 30px;
+   left: 120px;
+   width: 220px;
+   height: 50px;
+   border: none;
+   outline: none;
+   color: #fff;
+   background: #111;
+   cursor: pointer;
+   border-radius: 10px;
+   opacity: 0.9;
+   /* Прозрачность 50% */
+   z-index: 1;
+   /* Устанавливаем выше, чем текст */
+   font-size: 20px;
+}
+
+.prof_button:before,
+.main-test:before,
+.learn-more-btn:before,
+.main-site::before {
+   content: '';
+   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+   position: absolute;
+   bottom: -2px;
+   left: -2px;
+   background-size: 400%;
+   z-index: -1;
+   filter: blur(5px);
+   width: calc(100% + 4px);
+   height: calc(100% + 4px);
+   animation: glowing 20s linear infinite;
+   opacity: 0;
+   transition: opacity .3s ease-in-out;
+   border-radius: 10px;
+}
+
+.prof_button:active,
+.main-site:active,
+.main-test:active,
+.learn-more-btn:active {
+   color: #000
+}
+
+.prof_button:active:after,
+.main-test:active:after,
+.learn-more-btn:active:after,
+.main-site:active:after
+{
+   background: transparent;
+}
+
+.prof_button:hover:before,
+.main-test:hover:before,
+.learn-more-btn:hover:before,
+.main-site:hover:before {
+   opacity: 1;
+}
+
+.prof_button:after,
+.main-test:after,
+.learn-more-btn:after,
+.main-site:active:after {
+   z-index: -1;
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: #111;
+   left: 0;
+   top: 0;
+   border-radius: 10px;
+}
+
+
+.main-test {
+   width: 220px;
+   height: 50px;
+   border: none;
+   outline: none;
+   color: #fff;
+   background: #111;
+   cursor: pointer;
+   position: relative;
+   z-index: 0;
+   border-radius: 10px;
+   opacity: 0.9;
+   /* Прозрачность 50% */
+
+   perspective: 100px;
+   /* Добавляем трансформацию для создания перспективы */
+   transform: rotateZ(-5deg);
+   top: 85px;
+   left: -92px;
+   font-size: 20px;
+}
+
+.main-test:before {
+   transform: rotateZ(0deg);
+
+}
+
+
+
+.learn-more-btn {
+   position: absolute;
+   left: 8%;
+   width: 200px;
+   bottom: 25%;
+   z-index: 2;
+}
+
+
+
+.main-site {
+   width: 220px;
+   height: 50px;
+   border: none;
+   outline: none;
+   color: #fff;
+   background: #111;
+   cursor: pointer;
+   position: absolute;
+   bottom: 20%;
+   left: 9%;
+   z-index: 0;
+   border-radius: 10px;
+   opacity: 0.9;
+   font-size: 20px;
+}
+
+@keyframes glowing {
+   0% {
+      background-position: 0 0;
+   }
+
+   50% {
+      background-position: 400% 0;
+   }
+
+   100% {
+      background-position: 0 0;
+   }
+}
